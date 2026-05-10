@@ -1,4 +1,4 @@
- import { Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import ProtectedRoute from './components/ProtectedRoute'
 
@@ -14,6 +14,9 @@ import OrderDetail from './pages/OrderDetail'
 import Notifications from './pages/Notifications'
 import Support from './pages/Support'
 import TicketDetail from './pages/TicketDetail'
+
+// 🏪 NEW: Supplier Storefront (public)
+import SupplierStorefront from './pages/SupplierStorefront'
 
 // Customer pages
 import CustomerDashboard from './pages/customer/Dashboard'
@@ -51,6 +54,10 @@ export default function App() {
         <Route path="/notifications" element={<ProtectedRoute><Notifications /></ProtectedRoute>} />
         <Route path="/support" element={<ProtectedRoute><Support /></ProtectedRoute>} />
         <Route path="/support/:id" element={<ProtectedRoute><TicketDetail /></ProtectedRoute>} />
+
+        {/* 🏪 Supplier Storefront - Public (no auth required) */}
+        <Route path="/store/:supplierId" element={<SupplierStorefront />} />
+        <Route path="/store/slug/:storeSlug" element={<SupplierStorefront />} />
 
         {/* Customer */}
         <Route path="/customer/dashboard" element={
