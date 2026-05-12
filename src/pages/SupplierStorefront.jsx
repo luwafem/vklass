@@ -223,7 +223,6 @@ function StoreContent({ supplier, products, storeUrl, copied, onCopyLink }) {
                 <span>{products.length} product{products.length !== 1 ? 's' : ''}</span>
                 {supplier.store_slug && (
                   <span className="flex items-center gap-1">
-                    <Store size={12} /> /store/slug/{supplier.store_slug}
                   </span>
                 )}
                 {supplier.public_email && (
