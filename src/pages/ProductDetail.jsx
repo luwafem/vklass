@@ -270,8 +270,8 @@ export default function ProductDetail() {
                 : 'bg-[#0c0c0c] text-white hover:bg-gray-800 active:bg-gray-900'
             }`}
           >
-            <ShoppingCart size={16} />
-            {product.is_sold ? 'Sold Out' : 'Buy Now — Instant Access'}
+            
+            {product.is_sold ? 'Sold Out' : 'Buy Now'}
           </button>
 
           {!product.is_sold && (
@@ -283,23 +283,7 @@ export default function ProductDetail() {
       </div>
 
       {/* What you get */}
-      <div className="mt-12 pt-8 border-t border-gray-200">
-        <h3 className="font-semibold text-sm mb-4">What you get</h3>
-        <div className="grid sm:grid-cols-3 gap-4">
-          <div className="border border-gray-200 rounded-lg p-4">
-            <p className="font-medium text-sm text-gray-900">Encrypted delivery</p>
-            <p className="text-xs text-gray-500 mt-1">Credentials delivered securely after payment confirmation.</p>
-          </div>
-          <div className="border border-gray-200 rounded-lg p-4">
-            <p className="font-medium text-sm text-gray-900">24hr guarantee</p>
-            <p className="text-xs text-gray-500 mt-1">Replacement if credentials don't work within 24 hours.</p>
-          </div>
-          <div className="border border-gray-200 rounded-lg p-4">
-            <p className="font-medium text-sm text-gray-900">Direct support</p>
-            <p className="text-xs text-gray-500 mt-1">Message the supplier directly through vklass if you need help.</p>
-          </div>
-        </div>
-      </div>
+      
     </div>
   )
 }
